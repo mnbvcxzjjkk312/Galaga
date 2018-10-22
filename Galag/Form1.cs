@@ -16,7 +16,6 @@ namespace Galag
         {
             InitializeComponent();
             BulletPB.Visible = false;
-
         }
 
         Rectangle bullet1 = new Rectangle();
@@ -69,7 +68,7 @@ namespace Galag
             }
         }
 
-        private void PlayerAndBulletLocation()
+        public void PlayerAndBulletLocation()
         {
             //BulletLocation(); //총알 위치
             //int bulletY = BulletPB.Location.Y;
@@ -79,7 +78,7 @@ namespace Galag
             playerWidth = PlayerPB.Size.Width;
             playerHeight = PlayerPB.Size.Height;
 
-            point.X = PlayerPB.Location.X;
+            point.X = PlayerPB.Location.X + 10;
             point.Y = PlayerPB.Location.Y - playerHeight;
             
 
@@ -92,5 +91,6 @@ namespace Galag
                 hasBullet = true;
             }
         }
+
     }
 }
