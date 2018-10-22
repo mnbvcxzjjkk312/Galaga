@@ -49,10 +49,10 @@
             // BulletPB
             // 
             this.BulletPB.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("BulletPB.BackgroundImage")));
-            this.BulletPB.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.BulletPB.Location = new System.Drawing.Point(169, 465);
+            this.BulletPB.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.BulletPB.Location = new System.Drawing.Point(167, 488);
             this.BulletPB.Name = "BulletPB";
-            this.BulletPB.Size = new System.Drawing.Size(10, 10);
+            this.BulletPB.Size = new System.Drawing.Size(20, 20);
             this.BulletPB.TabIndex = 1;
             this.BulletPB.TabStop = false;
             // 

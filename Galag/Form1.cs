@@ -21,10 +21,10 @@ namespace Galag
 
         Rectangle bullet1 = new Rectangle();
 
-        private void ShootingBullet()
+        // 총알 위치
+        private void BulletLocation()
         {
-            bullet1.Height = BulletPB.Location.Y;
-            bullet1.Width = BulletPB.Location.X;
+
         }
 
         // Form x, y 좌표
@@ -63,32 +63,33 @@ namespace Galag
             if (e.KeyCode == Keys.Space)
             {
                 hasBullet = false;
-                ShootingBullet();
-                //BulletPB.Visible = true;
+                BulletPB.Visible = true;
 
-                playerWidth = PlayerPB.Size.Width;
-                playerHeight = PlayerPB.Size.Height;
-
-                point.X = PlayerPB.Location.X;
-                point.Y = PlayerPB.Location.Y - playerHeight;
-
-                Point p = new Point(point.X, point.Y);
-                BulletPB.Location = p;
-
-                while (BulletPB.Location.Y != FormY)
-                {
-                    point = BulletPB.Location;
-                    point.Y += 1;
-                    BulletPB.Location = p;
-                }
-
-                if (BulletPB.Location.Y == FormY && BulletPB.Visible)
-                {
-                    BulletPB.Visible = false;
-                    hasBullet = true;
-                }
+                PlayerAndBulletLocation();
             }
         }
 
+        private void PlayerAndBulletLocation()
+        {
+            //BulletLocation(); //총알 위치
+            //int bulletY = BulletPB.Location.Y;
+            //int bulletX = BulletPB.Location.X;
+
+            //플레이어 W, H
+            playerWidth = PlayerPB.Size.Width;
+            playerHeight = PlayerPB.Size.Height;
+
+            point.X = PlayerPB.Location.X;
+            point.Y = PlayerPB.Location.Y - playerHeight;
+
+            Point p = new Point(point.X, point.Y);
+            BulletPB.Location = p;
+
+            if (BulletPB.Location.Y == FormY && BulletPB.Visible)
+            {
+                BulletPB.Visible = false;
+                hasBullet = true;
+            }
+        }
     }
 }
