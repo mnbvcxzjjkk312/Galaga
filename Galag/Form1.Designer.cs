@@ -29,39 +29,54 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.PlayerPB = new System.Windows.Forms.PictureBox();
+            this.BulletPB = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.PlayerPB)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BulletPB)).BeginInit();
             this.SuspendLayout();
             // 
-            // pictureBox1
+            // PlayerPB
             // 
-            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(381, 398);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(40, 40);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.PlayerPB.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.PlayerPB.Image = ((System.Drawing.Image)(resources.GetObject("PlayerPB.Image")));
+            this.PlayerPB.Location = new System.Drawing.Point(147, 504);
+            this.PlayerPB.Name = "PlayerPB";
+            this.PlayerPB.Size = new System.Drawing.Size(48, 48);
+            this.PlayerPB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PlayerPB.TabIndex = 0;
+            this.PlayerPB.TabStop = false;
+            // 
+            // BulletPB
+            // 
+            this.BulletPB.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("BulletPB.BackgroundImage")));
+            this.BulletPB.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.BulletPB.Location = new System.Drawing.Point(169, 465);
+            this.BulletPB.Name = "BulletPB";
+            this.BulletPB.Size = new System.Drawing.Size(10, 10);
+            this.BulletPB.TabIndex = 1;
+            this.BulletPB.TabStop = false;
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.pictureBox1);
+            this.ClientSize = new System.Drawing.Size(332, 553);
+            this.Controls.Add(this.BulletPB);
+            this.Controls.Add(this.PlayerPB);
             this.Name = "Form1";
             this.Text = "Form1";
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PlayerPB)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BulletPB)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox PlayerPB;
+        private System.Windows.Forms.PictureBox BulletPB;
     }
 }
 
