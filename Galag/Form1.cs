@@ -91,6 +91,7 @@ namespace Galag
 
             point.X = PlayerPB.Location.X + 10;
             point.Y = PlayerPB.Location.Y - playerHeight;
+            
 
             Point p = new Point(point.X, point.Y);
             BulletPB.Location = p;
