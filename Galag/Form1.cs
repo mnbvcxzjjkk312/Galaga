@@ -39,11 +39,19 @@ namespace Galag
 
             if (e.KeyCode == Keys.Space)
             {
-                while (Bullet.Location.Y > 100)
-                {
-                    Point pb = new Point(Bullet.Location.X, Bullet.Location.Y - 5);
-                    Bullet.Location = pb;
-                }
+                fire.Interval = 50;
+                fire.Enabled = true;
+                fire.Tick += fire_Tick;
+            }
+        }
+
+        private Timer fire = new Timer();
+        private void fire_Tick(object sender, EventArgs e)
+        {
+            if (Bullet.Location.Y > 100)
+            {
+                Point pb = new Point(Bullet.Location.X, Bullet.Location.Y - 5);
+                Bullet.Location = pb;
             }
         }
     }
